@@ -1,5 +1,5 @@
-#ifndef LIBJORENC_H_
-#define LIBJORENC_H_
+#ifndef JOREN_H_
+#define JOREN_H_
 
 #include <joren/io.h>
 #include <joren/math.h>
@@ -9,4 +9,4 @@
 #include <joren/sys/rm.h>
 #include <joren/sys/wrapper_exec.h>
 
-#endif // LIBJORENC_H_
+#endif // JOREN_H_
