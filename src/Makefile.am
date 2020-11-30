@@ -4,7 +4,8 @@ MAIN_HEADERFILES = joren.h
 
 JOREN_HEADERFILES = \
 					 io.h math.h term_esc_seq.h sys/mkdir_p.h \
-					 sys/rm.h sys/wrapper_exec.h
+					 sys/rm.h sys/wrapper_exec.h \
+					 pp/overload.h
 
 SRC = io.c math.c sys/mkdir_p.c sys/rm.c sys/wrapper_exec.c
 
