@@ -1,20 +1,15 @@
 #!/usr/bin/env sh
 
-mkdir -p autotools
+mkdir -p autotools m4 build
 
-aclocal
-libtoolize
-autoheader
-automake -a
-autoconf
-automake -a
+autoreconf -if
 
-if [ "$1" = "--XDG" ]; then
-    XDG_INCLUDE_DIR="${XDG_INCLUDE_DIR:-$HOME/.local/include}"
-    XDG_LIB_DIR="${XDG_LIB_DIR:-$HOME/.local/lib}"
-    ./configure \
-        --includedir=$XDG_INCLUDE_DIR/c \
-        --libdir=$XDG_LIB_DIR/c
-else
-    ./configure "$@"
+if [ -z "$NOCONFIGURE" ]; then
+    cd build
+    if [ "$1" = "--XDG" ]; then
+        ARGS="--includedir=${XDG_INCLUDE_DIR:-$HOME/.local/include}"
+        ARGS="$ARGS --libdir=${XDG_LIB_DIR:-$HOME/.local/lib}"
+        shift 1
+    fi
+    ../configure $ARGS "$@"
 fi

@@ -1,4 +1,6 @@
-AUTOMAKE_OPTIONS = foreign
+AUTOMAKE_OPTIONS = foreign subdir-objects
+
+ACLOCAL_AMFLAGS = -I m4
 
 AUX_DIST_GEN = $(ac_aux_dir)
 

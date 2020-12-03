@@ -41,8 +41,8 @@
 
 #endif // ifdef __GNUC__
 
-intmax_t int joren_min(intmax_t a, intmax_t b);
-intmax_t int joren_max(intmax_t a, intmax_t b);
+intmax_t joren_min(intmax_t a, intmax_t b);
+intmax_t joren_max(intmax_t a, intmax_t b);
 
 intmax_t joren_gcd(intmax_t a, intmax_t b);
 intmax_t joren_lcm(intmax_t a, intmax_t b);

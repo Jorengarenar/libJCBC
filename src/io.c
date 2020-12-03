@@ -6,7 +6,7 @@ char* joren_fgets(char* s, int size, FILE* stream)
 {
     char* r = fgets(s, size, stream);
     if (r) {
-        size_t i = 0;
+        int i = 0;
         while (s[i] != '\n' && i < size) {
             ++i;
         }
@@ -18,13 +18,13 @@ char* joren_fgets(char* s, int size, FILE* stream)
 }
 
 char* joren_popen(char* restrict out,
-                  const size_t n,
+                  const int n,
                   const char* restrict cmd,
-                  const size_t lines)
+                  const int lines)
 {
     FILE* temp = popen(cmd, "r");
-    size_t l = 0;
-    size_t i = 0;
+    int l = 0;
+    int i = 0;
 
     while (!feof(temp) && l+1 < n && (!lines || i < lines)) {
         fgets(out+l, n-l, temp);

@@ -1,4 +1,4 @@
-AC_INIT([libjoren], [0.0.1], [https://joren.ga])
+AC_INIT([libjoren], [0.0.2], [https://joren.ga])
 AC_CONFIG_AUX_DIR(autotools)
 AC_CONFIG_SRCDIR([src])
 AC_CONFIG_MACRO_DIR([m4])

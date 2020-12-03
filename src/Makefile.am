@@ -1,3 +1,5 @@
+AUTOMAKE_OPTIONS = subdir-objects
+
 lib_LTLIBRARIES=libjoren.la
 
 MAIN_HEADERFILES = joren.h

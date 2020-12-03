@@ -16,9 +16,9 @@ extern "C" {
 char* joren_fgets(char* s, int size, FILE* stream);
 
 char* joren_popen(char* restrict out,
-                  const size_t n,
+                  const int n,
                   const char* restrict cmd,
-                  const size_t lines);
+                  const int lines);
 
 int joren_scanf(const char* restrict prompt,
                 const char* restrict errMsg,
