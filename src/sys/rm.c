@@ -1,6 +1,11 @@
 #include "rm.h"
 
+#define _XOPEN_SOURCE 500
+
+#include <ftw.h>
+#include <stdarg.h>
 #include <stdio.h>
+#include <unistd.h>
 
 int ntfw_rm(const char* fpath, const struct stat* sb, int typeflag, struct FTW* ftwbuf)
 {

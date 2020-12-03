@@ -1,6 +1,8 @@
 #ifndef MATH_H_
 #define MATH_H_
 
+#include <stdint.h>
+
 #ifdef __GNUC__
 
 #ifndef MIN
@@ -39,7 +41,10 @@
 
 #endif // ifdef __GNUC__
 
-long long int joren_min(int a, int b);
-long long int joren_max(int a, int b);
+intmax_t int joren_min(intmax_t a, intmax_t b);
+intmax_t int joren_max(intmax_t a, intmax_t b);
+
+intmax_t joren_gcd(intmax_t a, intmax_t b);
+intmax_t joren_lcm(intmax_t a, intmax_t b);
 
 #endif // MATH_H_

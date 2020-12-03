@@ -8,9 +8,9 @@
 
 // Graphics Mode {{{
 
-#define  RESET  ESC_SEQ(0,  m)
+#define  RESET  ESC_SEQ(0, m)
 
-// Text attributes {{{2
+// Text attributes {{{1
 
 #define  BOLD           ESC_SEQ(1,  m)
 
@@ -30,7 +30,7 @@
 #define  CROSSED        ESC_SEQ(9, m)
 #define  CROSSED_OFF    ESC_SEQ(29, m)
 
-// Text foreground colors {{{2
+// Text foreground colors {{{1
 
 #define  BLACK          ESC_SEQ(30, m)
 #define  RED            ESC_SEQ(31, m)
@@ -50,7 +50,7 @@
 #define  LIGHT_MAGENTA  ESC_SEQ(95, m)
 #define  LIGHT_CYAN     ESC_SEQ(96, m)
 
-// Text background colors {{{2
+// Text background colors {{{1
 
 #define  BG_BLACK          ESC_SEQ(40, m)
 #define  BG_RED            ESC_SEQ(41, m)
@@ -73,5 +73,3 @@
 // Graphics Mode }}}
 
 #endif // TERM_ESC_SEQ_H_
-
-// vim: fdl=0
