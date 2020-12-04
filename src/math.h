@@ -1,5 +1,5 @@
-#ifndef MATH_H_
-#define MATH_H_
+#ifndef JOREN_MATH_H_
+#define JOREN_MATH_H_
 
 #include <stdint.h>
 
@@ -47,4 +47,4 @@ intmax_t joren_max(intmax_t a, intmax_t b);
 intmax_t joren_gcd(intmax_t a, intmax_t b);
 intmax_t joren_lcm(intmax_t a, intmax_t b);
 
-#endif // MATH_H_
+#endif // JOREN_MATH_H_

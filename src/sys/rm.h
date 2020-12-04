@@ -1,5 +1,5 @@
-#ifndef RM_H_
-#define RM_H_
+#ifndef JOREN_RM_H_
+#define JOREN_RM_H_
 
 #ifdef __cplusplus
 extern "C" {

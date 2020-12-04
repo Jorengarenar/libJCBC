@@ -1,5 +1,5 @@
-#ifndef MKDIR_P_H_
-#define MKDIR_P_H_
+#ifndef JOREN_MKDIR_P_H_
+#define JOREN_MKDIR_P_H_
 
 #ifdef __cplusplus
 extern "C" {
