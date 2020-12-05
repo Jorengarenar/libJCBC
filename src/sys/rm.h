@@ -1,5 +1,5 @@
-#ifndef JOREN_RM_H_
-#define JOREN_RM_H_
+#ifndef JCBC_RM_H_
+#define JCBC_RM_H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -11,4 +11,4 @@ int rm(const char mode, const char* fmt, ...);
 }
 #endif
 
-#endif
+#endif // JCBC_RM_H_

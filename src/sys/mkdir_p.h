@@ -1,5 +1,5 @@
-#ifndef JOREN_MKDIR_P_H_
-#define JOREN_MKDIR_P_H_
+#ifndef JCBC_MKDIR_P_H_
+#define JCBC_MKDIR_P_H_
 
 #ifdef __cplusplus
 extern "C" {
@@ -11,4 +11,4 @@ int mkdir_p(const char* path_);
 }
 #endif
 
-#endif
+#endif // JCBC_MKDIR_P_H_

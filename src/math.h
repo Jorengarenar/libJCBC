@@ -1,5 +1,5 @@
-#ifndef JOREN_MATH_H_
-#define JOREN_MATH_H_
+#ifndef JCBC_MATH_H_
+#define JCBC_MATH_H_
 
 #include <stdint.h>
 
@@ -19,7 +19,7 @@
        _a > _b ? _a : _b; })
 #endif
 
-#elif defined(JOREN_UNSAFE_MINMAX) // ifdef __GNUC__
+#elif defined(JCBC_UNSAFE_MINMAX) // ifdef __GNUC__
 
 #ifndef MIN
 #define MIN(a, b) (((a) < (b)) ? (a) : (b))
@@ -32,19 +32,19 @@
 #else // ifdef __GNUC__
 
 #ifndef MIN
-#define MIN @ "To use unsafe MIN/MAX macro define JOREN_UNSAFE_MINMAX"
+#define MIN @ "To use unsafe MIN/MAX macro define JCBC_UNSAFE_MINMAX"
 #endif
 
 #ifndef MAX
-#define MAX @ "To use unsafe MIN/MAX macro define JOREN_UNSAFE_MINMAX"
+#define MAX @ "To use unsafe MIN/MAX macro define JCBC_UNSAFE_MINMAX"
 #endif
 
 #endif // ifdef __GNUC__
 
-intmax_t joren_min(intmax_t a, intmax_t b);
-intmax_t joren_max(intmax_t a, intmax_t b);
+intmax_t jcbc_min(intmax_t a, intmax_t b);
+intmax_t jcbc_max(intmax_t a, intmax_t b);
 
-intmax_t joren_gcd(intmax_t a, intmax_t b);
-intmax_t joren_lcm(intmax_t a, intmax_t b);
+intmax_t jcbc_gcd(intmax_t a, intmax_t b);
+intmax_t jcbc_lcm(intmax_t a, intmax_t b);
 
-#endif // JOREN_MATH_H_
+#endif // JCBC_MATH_H_

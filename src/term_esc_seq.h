@@ -1,5 +1,5 @@
-#ifndef JOREN_TERM_ESC_SEQ_H_
-#define JOREN_TERM_ESC_SEQ_H_
+#ifndef JCBC_TERM_ESC_SEQ_H_
+#define JCBC_TERM_ESC_SEQ_H_
 
 // Refer to: http://ascii-table.com/ansi-escape-sequences.php
 
@@ -72,4 +72,4 @@
 
 // Graphics Mode }}}
 
-#endif // JOREN_TERM_ESC_SEQ_H_
+#endif // JCBC_TERM_ESC_SEQ_H_

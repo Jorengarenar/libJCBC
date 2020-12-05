@@ -1,11 +1,11 @@
-#ifndef JOREN_PP_OVERLOAD_H_
-#define JOREN_PP_OVERLOAD_H_
+#ifndef JCBC_PP_OVERLOAD_H_
+#define JCBC_PP_OVERLOAD_H_
 
 // Based on:
 //    https://gustedt.wordpress.com/2010/06/08/detect-empty-macro-arguments/
 //    https://stackoverflow.com/a/30566098/10247460
 
-#define JOREN_PP_OVERLOAD(M, ...) _OVR(M, VA_NUM_ARGS(__VA_ARGS__)) (__VA_ARGS__)
+#define JCBC_PP_OVERLOAD(M, ...) _OVR(M, VA_NUM_ARGS(__VA_ARGS__)) (__VA_ARGS__)
 #define _OVR(name, num)           _OVR_EXPAND(name, num)
 #define _OVR_EXPAND(name, num)    name ## num
 
@@ -74,4 +74,4 @@
     HAS_ZERO_OR_ONE_ARGS(__VA_ARGS__),   0
 // *INDENT-ON*
 
-#endif // JOREN_PP_OVERLOAD_H_
+#endif // JCBC_PP_OVERLOAD_H_

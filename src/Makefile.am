@@ -1,23 +1,23 @@
 AUTOMAKE_OPTIONS = subdir-objects
 
-lib_LTLIBRARIES=libjoren.la
+lib_LTLIBRARIES=libjcbc.la
 
-MAIN_HEADERFILES = joren.h
+MAIN_HEADERFILES = jcbc.h
 
-JOREN_HEADERFILES = \
+JCBC_HEADERFILES = \
 					 io.h math.h term_esc_seq.h sys/mkdir_p.h \
 					 sys/rm.h \
 					 pp/overload.h
 
 SRC = io.c math.c sys/mkdir_p.c sys/rm.c
 
-libjoren_la_CFLAGS=$(MAIN_CFLAGS)
-libjoren_la_SOURCES=$(SRC) $(MAIN_HEADERFILES) $(JOREN_HEADERFILES)
+libjcbc_la_CFLAGS=$(MAIN_CFLAGS)
+libjcbc_la_SOURCES=$(SRC) $(MAIN_HEADERFILES) $(JCBC_HEADERFILES)
 
 headerfilesdir=$(includedir)
 headerfiles_HEADERS=$(MAIN_HEADERFILES)
 
-jorenheaderfilesdir=$(includedir)/joren
-nobase_jorenheaderfiles_HEADERS=$(JOREN_HEADERFILES)
+jcbcheaderfilesdir=$(includedir)/jcbc
+nobase_jcbcheaderfiles_HEADERS=$(JCBC_HEADERFILES)
 
 EXTRA_DIST=gencov

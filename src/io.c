@@ -2,7 +2,7 @@
 
 #include <stdarg.h>
 
-char* joren_fgets(char* s, int size, FILE* stream)
+char* jcbc_fgets(char* s, int size, FILE* stream)
 {
     char* r = fgets(s, size, stream);
     if (r) {
@@ -17,7 +17,7 @@ char* joren_fgets(char* s, int size, FILE* stream)
     return r;
 }
 
-char* joren_popen(char* restrict out,
+char* jcbc_popen(char* restrict out,
                   const int n,
                   const char* restrict cmd,
                   const int lines)
@@ -40,7 +40,7 @@ char* joren_popen(char* restrict out,
     return out;
 }
 
-int joren_scanf(const char* restrict prompt,
+int jcbc_scanf(const char* restrict prompt,
                 const char* restrict errMsg,
                 void (*eofFunc)(),
                 const char* const restrict fmt,

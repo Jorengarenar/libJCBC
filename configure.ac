@@ -1,4 +1,4 @@
-AC_INIT([libjoren], [0.0.2], [https://joren.ga])
+AC_INIT([libjcbc], [0.0.2], [https://joren.ga])
 AC_CONFIG_AUX_DIR(autotools)
 AC_CONFIG_SRCDIR([src])
 AC_CONFIG_MACRO_DIR([m4])
@@ -30,7 +30,7 @@ AC_SUBST(ac_aux_dir)
 
 AC_OUTPUT([
     Makefile
-    libjoren-1.0.pc
+    libjcbc-1.0.pc
     doc/Makefile
     src/Makefile
 ])
