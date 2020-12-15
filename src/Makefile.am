@@ -5,11 +5,12 @@ lib_LTLIBRARIES=libjcbc.la
 MAIN_HEADERFILES = jcbc.h
 
 JCBC_HEADERFILES = \
-					 io.h math.h term_esc_seq.h sys/mkdir_p.h \
-					 sys/rm.h \
-					 pp/overload.h
+				   io.h math.h \
+				   sys.h \
+				   term_esc_seq.h \
+				   pp/overload.h
 
-SRC = io.c math.c sys/mkdir_p.c sys/rm.c
+SRC = io.c math.c sys.c
 
 libjcbc_la_CFLAGS=$(MAIN_CFLAGS)
 libjcbc_la_SOURCES=$(SRC) $(MAIN_HEADERFILES) $(JCBC_HEADERFILES)

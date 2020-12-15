@@ -1,11 +1,57 @@
-#include "rm.h"
+#include "sys.h"
 
 #define _XOPEN_SOURCE 500
+
+#include <stdlib.h>
+
+#include <errno.h>
+#include <string.h>
+#include <linux/limits.h>
+#include <sys/stat.h>
 
 #include <ftw.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+
+const char* jcbc_getenv(const char* name, const char* fallback)
+{
+    char* temp = getenv(name);
+    return temp ? temp : fallback;
+}
+
+int jcbc_mkdir_p(const char* path_)
+{
+    errno = 0;
+
+    if (strlen(path_) > PATH_MAX-1) {
+        errno = ENAMETOOLONG;
+        return -1;
+    }
+
+    char path[PATH_MAX];
+    strcpy(path, path_);
+
+    // Create "intermediate" directories
+    for (char* p = path + 1; *p; ++p) {
+        if (*p == '/') {
+            *p = '\0'; // temporarily truncate
+            if (mkdir(path, S_IRWXU) < 0 && errno != EEXIST) {
+                return -1;
+            }
+            *p = '/';
+        }
+    }
+
+    // Create final dir
+    if (mkdir(path, S_IRWXU) < 0) {
+        if (errno != EEXIST) {
+            return -1;
+        }
+    }
+
+    return 0;
+}
 
 static int jcbc_ntfw_rm(const char* fpath, const struct stat* sb, int typeflag, struct FTW* ftwbuf)
 {
