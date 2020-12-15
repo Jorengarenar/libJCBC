@@ -1,18 +1,18 @@
 #include "math.h"
 
-intmax_t jcbc_min(intmax_t a, intmax_t b)
+long long jcbc_min(long long a, long long b)
 {
     return a < b ? a : b;
 }
 
-intmax_t jcbc_max(intmax_t a, intmax_t b)
+long long jcbc_max(long long a, long long b)
 {
     return a > b ? a : b;
 }
 
-intmax_t jcbc_gcd(intmax_t a, intmax_t b)
+long long jcbc_gcd(long long a, long long b)
 {
-    intmax_t temp;
+    long long temp;
     while (b) {
         temp = a % b;
         a = b;
@@ -21,7 +21,7 @@ intmax_t jcbc_gcd(intmax_t a, intmax_t b)
     return a;
 }
 
-intmax_t jcbc_lcm(intmax_t a, intmax_t b)
+long long jcbc_lcm(long long a, long long b)
 {
     if (a == 0 || b == 0) {
         return 0;

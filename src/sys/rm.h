@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-int rm(const char mode, const char* fmt, ...);
+int jcbc_rm(const char mode, const char* fmt, ...);
 
 #ifdef __cplusplus
 }

@@ -10,6 +10,9 @@
 
 #define  RESET  ESC_SEQ(0, m)
 
+#define  FG_RGB_SEQ(r,g,b) ESC_SEQ(38;2;r;g;b, m)
+#define  BG_RGB_SEQ(r,g,b) ESC_SEQ(48;2;r;g;b, m)
+
 // Text attributes {{{1
 
 #define  BOLD           ESC_SEQ(1,  m)

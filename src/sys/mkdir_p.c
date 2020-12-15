@@ -5,7 +5,7 @@
 #include <linux/limits.h>
 #include <sys/stat.h>
 
-int mkdir_p(const char* path_)
+int jcbc_mkdir_p(const char* path_)
 {
     errno = 0;
 

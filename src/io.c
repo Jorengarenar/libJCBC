@@ -18,9 +18,9 @@ char* jcbc_fgets(char* s, int size, FILE* stream)
 }
 
 char* jcbc_popen(char* restrict out,
-                  const int n,
-                  const char* restrict cmd,
-                  const int lines)
+                 const int n,
+                 const char* restrict cmd,
+                 const int lines)
 {
     FILE* temp = popen(cmd, "r");
     int l = 0;
@@ -41,10 +41,10 @@ char* jcbc_popen(char* restrict out,
 }
 
 int jcbc_scanf(const char* restrict prompt,
-                const char* restrict errMsg,
-                void (*eofFunc)(),
-                const char* const restrict fmt,
-                ...)
+               const char* restrict errMsg,
+               void (* eofFunc)(),
+               const char* const restrict fmt,
+               ...)
 {
     int n = 0;
     va_list vars;

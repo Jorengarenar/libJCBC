@@ -41,10 +41,10 @@
 
 #endif // ifdef __GNUC__
 
-intmax_t jcbc_min(intmax_t a, intmax_t b);
-intmax_t jcbc_max(intmax_t a, intmax_t b);
+long long jcbc_min(long long a, long long b);
+long long jcbc_max(long long a, long long b);
 
-intmax_t jcbc_gcd(intmax_t a, intmax_t b);
-intmax_t jcbc_lcm(intmax_t a, intmax_t b);
+long long jcbc_gcd(long long a, long long b);
+long long jcbc_lcm(long long a, long long b);
 
 #endif // JCBC_MATH_H_

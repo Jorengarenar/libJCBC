@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-int mkdir_p(const char* path_);
+int jcbc_mkdir_p(const char* path_);
 
 #ifdef __cplusplus
 }
