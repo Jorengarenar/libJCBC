@@ -5,9 +5,9 @@
 extern "C" {
 #endif
 
+const char* jcbc_getenv(const char* name, const char* fallback);
 int jcbc_mkdir_p(const char* path_);
 int jcbc_rm(const char mode, const char* fmt, ...);
-char* jcbc_getenv(const char* name, const char* fallback);
 
 #ifdef __cplusplus
 } // extern "C"
