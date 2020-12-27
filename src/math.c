@@ -1,4 +1,4 @@
-#include "math.h"
+#include "jcbc/math.h"
 
 long long jcbc_min(long long a, long long b)
 {

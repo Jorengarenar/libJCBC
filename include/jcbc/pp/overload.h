@@ -6,6 +6,9 @@
 //    https://stackoverflow.com/a/30566098/10247460
 
 #define JCBC_PP_OVERLOAD(M, ...) _OVR(M, VA_NUM_ARGS(__VA_ARGS__)) (__VA_ARGS__)
+
+/// @cond
+
 #define _OVR(name, num)           _OVR_EXPAND(name, num)
 #define _OVR_EXPAND(name, num)    name ## num
 
@@ -73,5 +76,7 @@
      9,  8,  7,  6,  5,  4,  3,  2,         \
     HAS_ZERO_OR_ONE_ARGS(__VA_ARGS__),   0
 // *INDENT-ON*
+
+/// @endcond
 
 #endif // JCBC_PP_OVERLOAD_H_

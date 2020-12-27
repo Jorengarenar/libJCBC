@@ -3,10 +3,8 @@
 
 #include <jcbc/io.h>
 #include <jcbc/math.h>
+#include <jcbc/sys.h>
 #include <jcbc/term_esc_seq.h>
-
-#include <jcbc/sys/mkdir_p.h>
-#include <jcbc/sys/rm.h>
 
 #include <jcbc/pp/overload.h>
 

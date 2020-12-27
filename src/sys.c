@@ -1,8 +1,9 @@
-#include "sys.h"
+#include "jcbc/sys.h"
 
 #define _XOPEN_SOURCE 500
 
 #include <stdlib.h>
+#include <string.h>
 
 #include <errno.h>
 #include <string.h>
