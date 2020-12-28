@@ -4,6 +4,8 @@ project(JCBC
   VERSION 0.1.0
   LANGUAGES C)
 
+set(JCBC jcbc)
+
 set(CMAKE_DISABLE_SOURCE_CHANGES  ON)
 set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
 
@@ -44,7 +46,7 @@ include(GNUInstallDirs)
 configure_file("${PROJECT_SOURCE_DIR}/libjcbc.pc.in"
                "${PROJECT_BINARY_DIR}/libjcbc.pc" @ONLY)
 
-install(TARGETS "${PROJECT_NAME}")
+install(TARGETS "${JCBC}")
 
 install(
   DIRECTORY "${PROJECT_SOURCE_DIR}/include/"
