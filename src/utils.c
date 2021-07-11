@@ -1,9 +1,12 @@
+#include "jcbc/utils.h"
+
 #ifdef WIN32
 # include <windows.h>
-#elif _POSIX_C_SOURCE >= 199309L
-# include <time.h>   // for nanosleep
 #else
-# include <unistd.h> // for usleep
+# include <unistd.h> // for usleep()
+# if _POSIX_C_SOURCE >= 199309L
+#  include <time.h>  // usleep() may not be available, so nanosleep()
+# endif
 #endif
 
 void jcbc_msleep(int ms)  // cross-platform sleep function

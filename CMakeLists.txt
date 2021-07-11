@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
 project(JCBC
-  VERSION 0.1.0
   LANGUAGES C)
 
 set(JCBC jcbc)
@@ -26,28 +25,14 @@ set(CMAKE_C_STANDARD 99)
 
 set(CMAKE_C_FLAGS_DEBUG "-g -Wall -Wextra -pedantic")
 
-set(ONLY_DOCS NO CACHE BOOL "Whether to build only docs")
+include_directories(include/)
+add_subdirectory(src/)
 
-if(NOT ONLY_DOCS)
 
-  include_directories(include/)
-
-  add_subdirectory(src/)
-
-  include(CTest)
-  #add_subdirectory(tests/)
-
-endif()
-
-add_subdirectory(docs/)
+# WHY WOULD YOU WANT TO INSTALL THIS?! ----------------------------------------
 
 include(GNUInstallDirs)
-
-configure_file("${PROJECT_SOURCE_DIR}/libjcbc.pc.in"
-               "${PROJECT_BINARY_DIR}/libjcbc.pc" @ONLY)
-
 install(TARGETS "${JCBC}")
-
 install(
   DIRECTORY "${PROJECT_SOURCE_DIR}/include/"
   DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
